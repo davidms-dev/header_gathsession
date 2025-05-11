@@ -1,0 +1,23 @@
+header{
+    .container{
+        display: flex;
+        align-items: center;
+        padding-top: 16px;
+        nav.main_nav{
+            margin-left: auto;
+            ul{
+                @include reset-list();
+                justify-content: space-between;
+                gap: 40px;
+                li a{
+                    text-decoration: none;
+                    color: $gray;
+                    display: inline-block;
+                    &:hover{
+                        border-bottom: 2px solid $pink;
+                    }
+                }
+            }
+        }
+    }
+}

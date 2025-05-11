@@ -1,0 +1,73 @@
+.hero{
+    width: 50%;
+    padding-top: 100px;
+    &__content{
+        h1{
+            color: $white;
+            font-family: $secondary-font;
+            font-size: 58px;
+            font-weight: 700;
+        }
+        p{
+            width: 75%;
+            
+            padding-top: 16px;
+            font-weight: 300;
+            color:$white;
+            opacity: 0.5;
+        }
+        &-links{
+            padding-top: 26px;
+            .button{
+                @include button();
+                font-size: 14px;
+                font-weight: 200;
+                margin-right: 26px;
+                &:hover{
+                    background-color: $light_gray;
+                }
+            }
+            .link{
+                color: $white;
+                font-size: 14px;
+                font-weight: 200;
+                position: relative;
+                &::after{
+                    content: "";
+                    height: 15px;
+                    width: 27px;
+                    background-image: url(/img/arrow.svg);
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: 100%;
+                    position:absolute;
+                    bottom: 2px;
+                    right: -34px;
+                }
+                &:hover{
+                    color: $pink;
+                }
+            } 
+        }
+    }
+    &__footer{
+        display: flex;
+        padding-top: 120px;
+        .items{
+            display: flex;
+            align-items: center;
+            img{
+                background-color: $light_gray;
+                padding: 5px;
+                border-radius: 10px;
+            }
+            h3{
+                padding-left: 10px;
+                color: $white;
+                font-size: 14px;
+                font-weight: 300;
+                width: 60%;
+            }
+        }
+    }
+}
